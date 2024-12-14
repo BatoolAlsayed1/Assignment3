@@ -7,10 +7,9 @@ async function fetchData() {
 
     const data = await response.json();
 
-    // Log the data structure to confirm the key
     console.log(data);
 
-    // Use the correct key 'results'
+
     const results = data.results;
     if (!results || !Array.isArray(results)) {
       console.error("No results found in the API response.");
@@ -18,7 +17,7 @@ async function fetchData() {
     }
     const tableBody = document.getElementById("data-table");
 
-    // Populate table with results
+
     results.forEach(result => {
       const row = document.createElement("tr");
       row.innerHTML = `
